@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ values.page_title }} - {{ values.project_name }}{% endblock %}
+{% block page_name %}{{ values.page_title.upper() }}{% endblock %}
+{% block completion %}{{ values.page_percent }}{% endblock %}
+
+{% block content %}
+<div class="content">
+    {% for i in values.projects %}
+        {% set github_link = values.projects[i]['GitHub'] %}
+        <div class="content-item"   
+             {% if github_link %} onclick="window.open('{{ github_link }}', '_blank')" {% endif %}>
+
+            <h3 style="margin-bottom: -1%;">{{ values.projects[i]['Name'] }}</h3>
+            <h5 style="margin-bottom: -1%;">{{ values.projects[i]['Description'] }}</h5>
+            <h6>
+                Created: {{ values.projects[i]['Created'] }} &nbsp;
+                Technologies: {{ values.projects[i]['Technologies'] }}
+            </h6>
+            <ul style="font-size: 18px;">
+                <li>{{ values.projects[i]['Line 1'] }}</li>
+                <li style="margin-top: 2%;">{{ values.projects[i]['Line 2'] }}</li>
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mudit's Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <p style="margin-left: 2%;">{% block page_name %}{% endblock %}</p>
+            <div>
+                <p class="header-percent">{% block completion %}{% endblock %} Complete</p>
+                <div class="logo">
+                    <span class="logo-text">MUDIT</span>
+                    <span class="logo-circles"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="footer-container">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('experience') }}">Experience</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('education') }}">Education</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <div class="home">13%</div>
+            <div class="exp">37%</div>
+            <div class="proj">7%</div>
+            <div class="edu">
+                <span class="text">83%</span>
+            </div>
+            <div class="about">
+                <span class="text">69%</span>
+            </div>
+        </div>
+        <div class="code">
+            Mudit's Portfolio
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

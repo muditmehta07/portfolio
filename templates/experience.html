@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ values.page_title }} - {{ values.project_name }}{% endblock %}
+{% block page_name %}{{ values.page_title.upper() }}{% endblock %}
+{% block completion %}{{ values.page_percent }}{% endblock %}
+
+{% block content %}
+<div class="content">
+    {% for i in values.experience %}
+        {% set margin_bottom = 'margin-bottom: 12%;' if i == '4' else 'margin-bottom: 0%;' %}
+        <div class="content-item" style="{{ margin_bottom }}">
+            <h3 style="margin-bottom: -1%;">{{ values.experience[i]['Title'] }}</h3>
+            <h5 style="margin-bottom: -1%;">{{ values.experience[i]['Company'] }}</h5>
+            <h6>
+                Date: {{ values.experience[i]['From Date'] }} - {{ values.experience[i]['To Date'] }} &nbsp;
+                Location: {{ values.experience[i]['Location'] }} ({{ values.experience[i]['Mode'] }})
+            </h6>
+            <ul style="font-size: 18px;">
+                <li>{{ values.experience[i]['Line 1'] }}</li>
+                <li style="margin-top: 2%;">{{ values.experience[i]['Line 2'] }}</li>
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

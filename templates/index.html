@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ values.page_title }} - {{ values.project_name }}{% endblock %}
+{% block page_name %}{{ values.page_title.upper() }}{% endblock %}
+{% block completion %}{{ values.page_percent }}{% endblock %}
+
+{% block content %}
+<section style="width: 97%;">
+    {% for i in range(192) %}
+    <div></div>
+    {% endfor %}
+</section>
+{% endblock %}

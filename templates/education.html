@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ values.page_title }} - {{ values.project_name }}{% endblock %}
+{% block page_name %}{{ values.page_title.upper() }}{% endblock %}
+{% block completion %}{{ values.page_percent }}{% endblock %}
+
+{% block content %}
+<div class="content">
+    {% for i in values.education %}
+        {% set margin_bottom = 'margin-bottom: 12%;' if i == '4' else 'margin-bottom: 0%;' %}
+        <div class="content-item" style="{{ margin_bottom }}">
+            <h3 style="margin-bottom: -1%;">{{ values.education[i]['University'] }}</h3>
+            <h5 style="margin-bottom: -1%;">{{ values.education[i]['Degree'] }}</h5>
+            <h6>
+                Graduation Year: {{ values.education[i]['Graduation Year'] }} &nbsp; Location: {{ values.education[i]['Location'] }}
+            </h6>
+            <p>
+                <ul style="font-size: 18px;">
+                    <li>{{ values.education[i]['Line 1'] }}</li>
+                    <li>{{ values.education[i]['Line 2'] }}</li>
+                </ul>
+            </p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
