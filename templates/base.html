@@ -24,25 +24,31 @@
 
     <footer>
         <div class="footer-container">
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('experience') }}">Experience</a>
-            <a href="{{ url_for('projects') }}">Projects</a>
-            <a href="{{ url_for('education') }}">Education</a>
-            <a href="{{ url_for('about') }}">About</a>
-            <div class="home">13%</div>
-            <div class="exp">37%</div>
-            <div class="proj">7%</div>
-            <div class="edu">
-                <span class="text">83%</span>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('experience') }}">Experience</a>
+                <a href="{{ url_for('projects') }}">Projects</a>
+                <a href="{{ url_for('education') }}">Education</a>
+                <a href="{{ url_for('about') }}">About</a>
             </div>
-            <div class="about">
-                <span class="text">69%</span>
+            <div class="progress-indicators">
+                <div class="home">13%</div>
+                <div class="exp">37%</div>
+                <div class="proj">7%</div>
+                <div class="edu"><span class="text">83%</span></div>
+                <div class="about"><span class="text">69%</span></div>
             </div>
         </div>
         <div class="code">
             Mudit's Portfolio
         </div>
     </footer>
+    
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

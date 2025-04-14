@@ -6,6 +6,21 @@
 {% block content%}
 <div class="about-page">
     <div class="contact">
+        <div class="about-me" style="margin-top: -6px;">
+            <h4>Mudit M</h4>
+            <p>22 year old, pre-final year Computer Science Engineering student from New Delhi, India.</p>
+            {% for i in values.about['Links'] %}
+                <div class="skills-item"><a href="{{ values.about['Links'][i] }}" target="_blank" style="color: inherit; text-decoration: none;">{{ i }}</a></div>
+            {% endfor %}
+        </div>
+        <div class="skills">
+            <h4>Skills</h4>
+            {% for i in values.about['Skills'] %}
+                <div class="skills-item">{{ i }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content-about">
         <h4>Contact</h4>
         <form action="/submit" method="post">
             <div class="form-col">
@@ -27,21 +42,6 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
-    </div>
-    <div class="content-about">
-        <div class="about-me" style="margin-top: -6px;">
-            <h4>Mudit M</h4>
-            <p>22 year old, pre-final year Computer Science Engineering student from New Delhi, India.</p>
-            {% for i in values.about['Links'] %}
-                <div class="skills-item"><a href="{{ values.about['Links'][i] }}" target="_blank" style="color: inherit; text-decoration: none;">{{ i }}</a></div>
-            {% endfor %}
-        </div>
-        <div class="skills">
-            <h4>Skills</h4>
-            {% for i in values.about['Skills'] %}
-                <div class="skills-item">{{ i }}</div>
-            {% endfor %}
-        </div>
     </div>
 </div>
 

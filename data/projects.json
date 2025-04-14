@@ -1,0 +1,20 @@
+{
+    "1": {
+        "Name": "Software Installation Agent",
+        "Description": "Associated with Wipro Limited",
+        "Created": "Aug 2024",
+        "Technologies": "Python, LangChain, Flask, Azure Cognitive Services",
+        "Line 1": "Developed a semantic search tool in Python using LangChain powered by Azure Cognitive Search and Vector Embeddings.",
+        "Line 2": "The tool utilizes Flask and Postman to manage input query responses."
+    },
+
+    "2": {
+        "GitHub": "https://github.com/muditmehta07/Michelle-Archived",
+        "Name": "Michelle (Archived)",
+        "Description": "Your All-in-One Discord Companion",
+        "Created": "Dec 2021",
+        "Technologies": "Discord.py",
+        "Line 1": "Built a Discord bot with features like welcome messages, anonymous confessions, reaction roles, and mini-games.",
+        "Line 2": "Added XP levels, leaderboards, a virtual store, moderation tools, and integrations like YouTube and Google Translate."
+    }
+}

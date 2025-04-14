@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
 import smtplib
+import json, settings
 from email.message import EmailMessage
 
 app = Flask(__name__, 
@@ -13,104 +14,17 @@ class Values:
         self.page_title = page_title
         self.page_percent = page_percent
 
-        self.experience = {
-            "1": {
-                "Company": "Wipro Limited",
-                "Title": "Project Intern",
-                "From Date": "Jun 2024",
-                "To Date": "Aug 2024",
-                "Location": "Bengaluru, Karnataka",
-                "Mode": "Hybrid",
-                "Line 1": "Built AI-powered search tool using LangChain and Azure Cognitive Search to recommend proprietary software.",
-                "Line 2": "Implemented vector embeddings to process queries and enhance search accuracy within the company's software ecosystem."
-            },
+        with open("./data/experience.json", "r") as f:
+            self.experience = json.load(f)
 
-            "2": {
-                "Company": "HP (India Sales Pvt. Ltd.)",
-                "Title": "Intern",
-                "From Date": "Jun 2023",
-                "To Date": "Aug 2023",
-                "Location": "Gurugram, Haryana",
-                "Mode": "On-Site",
-                "Line 1": "Collaborated with the marketing team, identified need for AI-based retail tracking system.",
-                "Line 2": "Partnered with AI companies to deploy AI-powered retail analytics tools."
-            },
+        with open("./data/projects.json", "r") as f:
+            self.projects = json.load(f)
 
-            "3": {
-                "Company": "Swar Kala Sangam (Performing Arts Pvt. Ltd.)",
-                "Title": "Web Developer",
-                "From Date": "Nov 2021",
-                "To Date": "Jul 2022",
-                "Location": "Gurugram, Haryanaa",
-                "Mode": "On-Site",
-                "Line 1": "Handled and resolved backend queries to ensure seamless performance and functionality.",
-                "Line 2": "Deployment, monitoring, and maintenance of the web application on Amazon Web Services (AWS)."
-            },
+        with open("./data/education.json", "r") as f:
+            self.education = json.load(f)
 
-            "4": {
-                "Company": "Freelance",
-                "Title": "Discord Bot Developer",
-                "From Date": "Jun 2020",
-                "To Date": "May 2021",
-                "Location": "Gurugram, Haryana",
-                "Mode": "Remote",
-                "Line 1": "Developed custom Discord bots tailored to client needs using Python and the Discord.py framework.",
-                "Line 2": "Built ML-powered bots using TensorFlow, Keras and NLTK, while Pillow was used for dynamic visual content."
-            }
-        }
-
-        self.projects = {
-            "1": {
-                "Name": "Software Installation Agent",
-                "Description": "Associated with Wipro Limited",
-                "Created": "Aug 2024",
-                "Technologies": "Python, LangChain, Flask, Azure Cognitive Services",
-                "Line 1": "Developed a semantic search tool in Python using LangChain powered by Azure Cognitive Search and Vector Embeddings.",
-                "Line 2": "The tool utilizes Flask and Postman to manage input query responses."
-            },
-
-            "2": {
-                "GitHub": "https://github.com/muditmehta07/Michelle-Archived",
-                "Name": "Michelle (Archived)",
-                "Description": "Your All-in-One Discord Companion",
-                "Created": "Dec 2021",
-                "Technologies": "Discord.py",
-                "Line 1": "Built a Discord bot with features like welcome messages, anonymous confessions, reaction roles, and mini-games.",
-                "Line 2": "Added XP levels, leaderboards, a virtual store, moderation tools, and integrations like YouTube and Google Translate."
-            }
-        }
-
-        self.education = {
-            "1": {
-                "Degree": "B.Tech Computer Science & Engineering",
-                "University": "Amity University",
-                "Graduation Year": "2026",
-                "Location": "Jaipur, Rajasthan",
-                "Line 1": "Minor Degree in Bioinformatics",
-                "Line 2": "Started a Developer Club"
-            },
-
-            "2": {
-                "Degree": "High School",
-                "University": "GD Goenka Public School",
-                "Graduation Year": "2021",
-                "Location": "Gurugram, Haryana",
-                "Line 1": "Major in Computer Science",
-                "Line 2": "Minor in Painting"
-            }
-        }
-
-        self.about = {
-                "Name": "Mudit M",
-                "Bio": "22-year-old, Pre-final year Computer Science Engineering Student from Delhi NCR.",
-                "Links": {
-                    "Resume": "url_for('static', filename='resume.pdf')",
-                    "Linkedin": "https://www.linkedin.com/in/muditmehta07/",
-                    "GitHub": "https://github.com/muditmehta07",
-                    "Mail": "mailto:muditmehta@icloud.com"
-                },
-                "Skills": ['Python', 'LangChain', 'TensorFlow', 'Flask', 'Golang', 'Gin', 'Azure Cognitive Services']
-        }
+        with open("./data/about.json", "r") as f:
+            self.about = json.load(f)
 
 @app.route('/')
 def index():
@@ -154,13 +68,13 @@ def submit():
     return redirect(url_for('about', success=True))
 
 def send_email(subject, body):
-    EMAIL_ADDRESS = "muditmehta254@gmail.com"
-    EMAIL_PASSWORD = "nmph rokb azua kqyn"
+    EMAIL_ADDRESS = settings.EMAIL_FROM
+    EMAIL_PASSWORD = settings.PASSWORD
 
     msg = EmailMessage()
     msg['Subject'] = subject
     msg['From'] = EMAIL_ADDRESS
-    msg['To'] = "muditmehta@icloud.com"
+    msg['To'] = settings.EMAIL_TO
     msg.set_content(body)
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:

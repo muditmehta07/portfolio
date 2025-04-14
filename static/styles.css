@@ -163,6 +163,10 @@ input[type="submit"]:hover {
     transition: transform 0.3s ease;
 }
 
+.content-item ul {
+    font-size: 18px;
+}
+
 .content-item:hover {
     transform: scale(1.01);
 }
@@ -312,26 +316,28 @@ footer .code {
 }
 
 .footer-container {
-    display: grid;
+    display: block;
     width: 90%;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 8px;
-
 }
 
 .footer-container div {
-    border: 2px solid #8EE3F1;
     font-size: 20px;
     padding: 4px 0;
     position: relative;
+}
 
+.nav-links, .progress-indicators {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 8px;
 }
 
 .footer-container div.home {
     position: relative;
     overflow: hidden;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.home::before {
@@ -343,6 +349,7 @@ footer .code {
     width: 0%;
     background-color: #8EE3F1;
     animation: homeTransition 1s ease forwards;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.home::after {
@@ -353,6 +360,7 @@ footer .code {
     top: 0;
     position: absolute;
     background-color: #8EE3F1;
+    border: 2px solid #8EE3F1;
     opacity: 0;
 }
 
@@ -368,6 +376,7 @@ footer .code {
 .footer-container div.exp {
     position: relative;
     overflow: hidden;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.exp::before {
@@ -379,6 +388,7 @@ footer .code {
     width: 0%;
     background-color: #8EE3F1;
     animation: expTransition 2s ease forwards;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.exp::after {
@@ -390,6 +400,7 @@ footer .code {
     position: absolute;
     background-color: #8EE3F1;
     opacity: 0;
+    border: 2px solid #8EE3F1;
 }
 
 @keyframes expTransition {
@@ -404,6 +415,7 @@ footer .code {
 .footer-container div.proj {
     position: relative;
     overflow: hidden;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.proj::before {
@@ -415,6 +427,7 @@ footer .code {
     width: 0%;
     background-color: #8EE3F1;
     animation: projTransition 2s ease forwards;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.proj::after {
@@ -426,6 +439,7 @@ footer .code {
     position: absolute;
     background-color: #8EE3F1;
     opacity: 0;
+    border: 2px solid #8EE3F1;
 }
 
 @keyframes projTransition {
@@ -441,6 +455,7 @@ footer .code {
     position: relative;
     overflow: hidden;
     color: #8EE3F1;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.edu span.text {
@@ -461,6 +476,7 @@ footer .code {
     background-color: #8EE3F1;
     animation: eduTransition 2s ease forwards;
     z-index: 1;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.edu::after {
@@ -473,6 +489,7 @@ footer .code {
     color: #002041;
     background-color: #8EE3F1;
     opacity: 0;
+    border: 2px solid #8EE3F1;
 }
 
 @keyframes eduTransition {
@@ -490,6 +507,7 @@ footer .code {
     position: relative;
     overflow: hidden;
     color: #8EE3F1;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.about span.text {
@@ -510,6 +528,7 @@ footer .code {
     background-color: #8EE3F1;
     animation: eduTransition 2s ease forwards;
     z-index: 1;
+    border: 2px solid #8EE3F1;
 }
 
 .footer-container div.about::after {
@@ -522,6 +541,7 @@ footer .code {
     color: #002041;
     background-color: #8EE3F1;
     opacity: 0;
+    border: 2px solid #8EE3F1;
 }
 
 @keyframes aboutTransition {
@@ -632,5 +652,269 @@ section>div.three-2 {
     100% {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+/* Add these new styles at the end of the file */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #002041;
+    border: 2px solid #8EE3F1;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #8EE3F1;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    footer {
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    footer.active {
+        transform: translateY(0);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .progress-indicators {
+        display: none;
+    }
+
+    .nav-links {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    footer .code {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .header-content {
+        width: 95%;
+        margin: 10px 0;
+        justify-content: space-between;
+    }
+
+    .header-content p:first-child {
+        margin-left: 25px !important;
+    }
+
+    .logo {
+        scale: 0.6;
+        margin-left: auto;
+    }
+
+    .content {
+        margin-top: 140px;
+    }
+
+    .contact {
+        margin-top: 5vh;
+    }
+
+    .content-about {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .header-content div p {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .content {
+        margin-top: 17vh;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .content-item {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .content-item ul {
+        font-size: 12px;
+    }
+
+    .about-page {
+        flex-direction: column;
+    }
+
+    .contact {
+        margin: 20vh 4% 5vh 4%;
+        width: 92%;
+    }
+
+    .content-about {
+        margin: 0vh 4% 12vh 4%;
+        width: 92%;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .skills-item {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    section {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 60px;
+        margin-top: 80px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header-content {
+        padding: 5px;
+    }
+
+    .logo {
+        scale: 0.5;
+        margin-right: -10vw
+    }
+
+    .header-content div p {
+        font-size: 0px;
+        margin-left: 18px;
+    }
+
+    section {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 50px;
+    }
+
+    .content-item {
+        padding: 15px;
+    }
+
+    .content-item ul {
+        font-size: 12px;
+    }
+
+    .skills-item {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content-item {
+        width: 44%;
+    }
+
+    .content-item ul {
+        font-size: 12px;
+    }
+
+    section {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 70px;
+    }
+
+    .contact {
+        margin-top: 10vh;
+        width: 45%;
+    }
+
+    .content-about {
+        margin-top: 10vh;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        bottom: 2vh;
+        right: 3vw;
+        padding: 15px;
+    }
+
+    .hamburger-menu span {
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
+    }
+
+    footer.active {
+        padding-bottom: 80px;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .footer-container a {
+        font-size: 16px;
+    }
+    
+    .footer-container div {
+        border: none;
     }
 }

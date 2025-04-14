@@ -1,0 +1,19 @@
+{
+    "1": {
+        "Degree": "B.Tech Computer Science & Engineering",
+        "University": "Amity University",
+        "Graduation Year": "2026",
+        "Location": "Jaipur, Rajasthan",
+        "Line 1": "Minor Degree in Bioinformatics",
+        "Line 2": "Started a Developer Club"
+    },
+
+    "2": {
+        "Degree": "High School",
+        "University": "GD Goenka Public School",
+        "Graduation Year": "2021",
+        "Location": "Gurugram, Haryana",
+        "Line 1": "Major in Computer Science",
+        "Line 2": "Minor in Painting"
+    }
+}

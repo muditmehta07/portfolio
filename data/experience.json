@@ -1,0 +1,45 @@
+{
+    "1": {
+        "Company": "Wipro Limited",
+        "Title": "Project Intern",
+        "From Date": "Jun 2024",
+        "To Date": "Aug 2024",
+        "Location": "Bengaluru, Karnataka",
+        "Mode": "Hybrid",
+        "Line 1": "Built AI-powered search tool using LangChain and Azure Cognitive Search to recommend proprietary software.",
+        "Line 2": "Implemented vector embeddings to process queries and enhance search accuracy within the company's software ecosystem."
+    },
+
+    "2": {
+        "Company": "HP (India Sales Pvt. Ltd.)",
+        "Title": "Intern",
+        "From Date": "Jun 2023",
+        "To Date": "Aug 2023",
+        "Location": "Gurugram, Haryana",
+        "Mode": "On-Site",
+        "Line 1": "Collaborated with the marketing team, identified need for AI-based retail tracking system.",
+        "Line 2": "Partnered with AI companies to deploy AI-powered retail analytics tools."
+    },
+
+    "3": {
+        "Company": "Swar Kala Sangam (Performing Arts Pvt. Ltd.)",
+        "Title": "Web Developer",
+        "From Date": "Nov 2021",
+        "To Date": "Jul 2022",
+        "Location": "Gurugram, Haryanaa",
+        "Mode": "On-Site",
+        "Line 1": "Handled and resolved backend queries to ensure seamless performance and functionality.",
+        "Line 2": "Deployment, monitoring, and maintenance of the web application on Amazon Web Services (AWS)."
+    },
+
+    "4": {
+        "Company": "Freelance",
+        "Title": "Discord Bot Developer",
+        "From Date": "Jun 2020",
+        "To Date": "May 2021",
+        "Location": "Gurugram, Haryana",
+        "Mode": "Remote",
+        "Line 1": "Developed custom Discord bots tailored to client needs using Python and the Discord.py framework.",
+        "Line 2": "Built ML-powered bots using TensorFlow, Keras and NLTK, while Pillow was used for dynamic visual content."
+    }
+}
