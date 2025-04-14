@@ -715,7 +715,6 @@ section>div.three-2 {
     }
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
         font-size: 20px;
@@ -755,7 +754,7 @@ section>div.three-2 {
     }
 
     .content {
-        margin-top: 17vh;
+        margin-top: 20vh;
         margin-left: 4%;
         margin-right: 4%;
     }
