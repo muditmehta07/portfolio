@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mudit | Portfolio</title>
-    <meta
-      name="description"
-      content="A minimal personal portfolio for Mudit, inspired by tedawf.com and tailored around GitHub projects and resume links."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
-    <div class="shell">
-      <header class="topbar">
-        <nav class="nav" aria-label="Primary">
-          <a href="#home">home</a>
-          <a href="#experience">experience</a>
-          <a href="#projects">projects</a>
-          <a href="#contact">contact</a>
-        </nav>
-      </header>
 
-      <main id="home">
-        <section class="hero">
-          <div class="hero-copy">
-            <h1>mudit mehta</h1>
-            <p class="lede">
-              a final year computer science major with interests in ai-agents and robotics
-            </p>
-            <div class="quick-links">
-              <a href="assets/resume.pdf" target="_blank" rel="noreferrer" class="resume-btn">
-                <i data-lucide="file-text"></i> Resume
-              </a>
-              <a href="https://www.linkedin.com/in/muditmehta07/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <i data-lucide="linkedin"></i>
-              </a>
-              <a href="https://github.com/muditmehta07" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <i data-lucide="github"></i>
-              </a>
-              <a href="mailto:muditmehta@outlook.com" aria-label="Email">
-                <i data-lucide="mail"></i>
-              </a>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mudit's Portfolio</title>
+  <meta name="description"
+    content="A minimal personal portfolio for Mudit, inspired by tedawf.com and tailored around GitHub projects and resume links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">home</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>mudit mehta</h1>
+          <p class="lede">
+            a final year computer science major with interests in ai-agents and robotics
+          </p>
+          <div class="quick-links">
+            <a href="assets/resume.pdf" target="_blank" rel="noreferrer" class="resume-btn">
+              <i data-lucide="file-text"></i> Resume
+            </a>
+            <a href="https://www.linkedin.com/in/muditmehta07/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com/muditmehta07" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="mailto:muditmehta@outlook.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
           </div>
+        </div>
 
-<!--           <div class="hero-photo-wrap">
+        <!--           <div class="hero-photo-wrap">
             <img
               class="hero-photo"
               src="https://avatars.githubusercontent.com/u/70369287?v=4"
               alt="Photo of Mudit from GitHub"
             />
           </div> -->
-        </section>
+      </section>
 
-        <section class="section" id="experience">
-          <div class="section-head">
-            <h2>experience</h2>
-          </div>
+      <section class="section" id="experience">
+        <div class="section-head">
+          <h2>experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-mark">
+              <img src="assets/addverb-logo.png"
+                style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-heading">
+                <h3>Addverb<br><span style="font-size: 16px; font-weight: 400;">Robotics Intern</span></h3>
+                <span>Jun 2025 - Aug 2025</span>
+              </div>
+              <p>
+                • Built and deployed a customer-facing error monitoring dashboard for the live Fleet Management System,
+                including REST APIs, backend services, and third-party integrations used by robot operators in
+                production.
+                <br>
+                • Reduced localization drift in autonomous mobile robots by implementing IMU and odometry sensor fusion
+                using an Extended Kalman Filter (EKF) within a ROS-based navigation stack.
+              </p>
+            </div>
+          </article>
 
           <div class="timeline">
             <article class="timeline-item">
               <div class="timeline-mark">
-                <img src="assets/addverb-logo.png" style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
-              </div>
-              <div class="timeline-content">
-                <div class="timeline-heading">
-                  <h3>Addverb<br><span style="font-size: 16px; font-weight: 400;">Robotics Intern</span></h3>
-                  <span>Jun 2025 - Aug 2025</span>
-                </div>
-                <p>
-                  • Built and deployed a customer-facing error monitoring dashboard for the live Fleet Management System, including REST APIs, backend services, and third-party integrations used by robot operators in production.
-                  <br>
-                  • Reduced localization drift in autonomous mobile robots by implementing IMU and odometry sensor fusion using an Extended Kalman Filter (EKF) within a ROS-based navigation stack.
-                </p>
-              </div>
-            </article>
-
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-mark">
-                <img src="assets/wipro-logo.png" style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
+                <img src="assets/wipro-logo.png"
+                  style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
               </div>
               <div class="timeline-content">
                 <div class="timeline-heading">
@@ -94,63 +98,68 @@
                   <span>Jun 2025 - Aug 2025</span>
                 </div>
                 <p>
-                  • Built an internal AI agent using LangChain and OpenAI that recommends relevant proprietary applications based on
+                  • Built an internal AI agent using LangChain and OpenAI that recommends relevant proprietary
+                  applications based on
                   natural language queries, enabling on-the-go access to matched tools.
                   <br>
-                  • Integrated an Azure Vector Database as the retrieval backend, enabling semantic search across a catalogue of applications.
+                  • Integrated an Azure Vector Database as the retrieval backend, enabling semantic search across a
+                  catalogue of applications.
                 </p>
               </div>
             </article>
 
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-mark">
-                <img src="assets/hp-logo.png" style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
-              </div>
-              <div class="timeline-content">
-                <div class="timeline-heading">
-                  <h3>HP, Inc<br><span style="font-size: 16px; font-weight: 400;">Intern</span></h3>
-                  <span>Jun 2025 - Aug 2025</span>
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-mark">
+                  <img src="assets/hp-logo.png"
+                    style="width: inherit; height: inherit; border: inherit; border-radius: inherit; border-color: inherit;">
                 </div>
-                <p>
-                • Researched and evaluated AI tool providers for customer tracking and store analytics across 700+ HP World retail locations,
-                producing a shortlist of implementation-ready vendors.
-                </p>
-              </div>
-            </article>
-        </section>
+                <div class="timeline-content">
+                  <div class="timeline-heading">
+                    <h3>HP, Inc<br><span style="font-size: 16px; font-weight: 400;">Intern</span></h3>
+                    <span>Jun 2025 - Aug 2025</span>
+                  </div>
+                  <p>
+                    • Researched and evaluated AI tool providers for customer tracking and store analytics across 700+
+                    HP World retail locations,
+                    producing a shortlist of implementation-ready vendors.
+                  </p>
+                </div>
+              </article>
+      </section>
 
-        <section class="section" id="projects">
-          <div class="section-head">
-            <h2>featured projects</h2>
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h2>featured projects</h2>
+        </div>
+
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-head">
+          <h2>contact</h2>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
           </div>
+          <textarea name="message" rows="3" placeholder="Message" required></textarea>
+          <br>
+          <button type="submit">send message →</button>
+        </form>
+      </section>
+    </main>
 
-          <div class="project-grid" id="project-grid"></div>
-        </section>
+    <footer class="footer">
+      <p>with great power, comes great responsibility</p>
+      <p id="year"></p>
+    </footer>
+  </div>
 
-        <section class="section contact" id="contact">
-          <div class="section-head">
-            <h2>contact</h2>
-          </div>
+  <script src="./script.js"></script>
+</body>
 
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="form-row">
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="email" name="email" placeholder="Email" required />
-            </div>
-            <textarea name="message" rows="3" placeholder="Message" required></textarea>
-            <br>
-            <button type="submit">send message →</button>
-          </form>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p>github/muditmehta07</p>
-        <p id="year"></p>
-      </footer>
-    </div>
-
-    <script src="./script.js"></script>
-  </body>
 </html>
