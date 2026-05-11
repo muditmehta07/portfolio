@@ -1,14 +1,14 @@
 const featuredProjects = [
   {
     badge: "robot sim",
-    title: "Autonomous Shopper Assistance System",
+    title: "ShopAssist",
     description:
-      "A simulated robot that navigates autonomously to the desired item in a supermarket.",
+      "It is an Autonomous Shopper Assistance System which aims to provide an effortless shopping experience to customers in retail environments.",
     meta: ["ROS2", "LangChain", "MongoDB", "Fast API", "Python", "ReactJS"],
     links: [
       {
         label: "Source",
-        href: "https://github.com/muditmehta07/asas",
+        href: "https://github.com/muditmehta07/ShopAssist",
       },
     ],
   },
